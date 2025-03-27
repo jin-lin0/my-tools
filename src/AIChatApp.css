@@ -1,0 +1,120 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom, 0) 0;
+  background: #f7fafc;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.chat-header {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.chat-header h2 {
+  color: #2d3748;
+  margin: 0;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: white;
+  margin-bottom: 0;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100vh - 120px);
+}
+
+.message {
+  width: fit-content;
+  max-width: 90%;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  line-height: 1.4;
+}
+
+.message.user {
+  margin-left: auto;
+  background: #4299e1;
+  color: white;
+  border-radius: 12px 12px 0 12px;
+}
+
+.message.ai {
+  margin-right: auto;
+  background: #edf2f7;
+  color: #2d3748;
+  border-radius: 12px 12px 12px 0;
+  text-align: left;
+}
+
+.message.loading {
+  color: #718096;
+  font-style: italic;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  bottom: 0;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 0.75rem 1.5rem;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-input button:hover {
+  background: #3182ce;
+}
+
+.back-button {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: #cbd5e0;
+}
