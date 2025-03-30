@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./AIChatApp.css";
-import { SILICONFLOW_API_KEY, SILICONFLOW_API_URL } from "./config";
+import {
+  SILICONFLOW_API_KEY,
+  SILICONFLOW_API_URL,
+  SERVER_API_URL,
+} from "./config";
 import ReactMarkdown from "react-markdown";
 
 interface Message {
@@ -91,6 +95,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
       }
     }
     console.log("token", token);
+    let answer = "";
 
     try {
       const response = await fetch(`${SILICONFLOW_API_URL}/chat/completions`, {
@@ -129,19 +134,34 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
         for (const line of lines) {
           const message = line.replace(/^data: /, "");
           if (message === "[DONE]") {
-            return;
+            break;
           }
 
           try {
             const parsed = JSON.parse(message);
             if (parsed.choices[0].delta?.content && onChunk) {
-              onChunk(parsed.choices[0].delta.content);
+              const content = parsed.choices[0].delta.content;
+              answer += content;
+              onChunk(content);
             }
           } catch (error) {
             console.error("解析流数据错误:", error);
           }
         }
       }
+
+      // 保存对话记录到后端
+      await fetch(`${SERVER_API_URL}/messages`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          question: message,
+          answer,
+          model: "deepseek-ai/DeepSeek-V3",
+        }),
+      });
     } catch (error) {
       console.error("API请求错误:", error);
       throw error;
