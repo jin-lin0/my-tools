@@ -4,3 +4,8 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+@font-face {
+  font-family: "DingLieXiDa";
+  src: url("./assets/dingliexidafont.ttf");
+}
