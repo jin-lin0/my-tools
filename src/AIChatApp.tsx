@@ -125,7 +125,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+          onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
           placeholder="输入消息..."
         />
         <button onClick={handleSendMessage} disabled={isLoading}>

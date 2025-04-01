@@ -5,6 +5,9 @@ import {
   SERVER_API_URL,
 } from "./config";
 
+const MAX_CONTEXT_LENGTH = 10;
+const conversationContext: Array<{ role: string; content: string }> = [];
+
 export const fetchDeepSeekAPI = async (
   message: string,
   onChunk?: (chunk: string) => void
@@ -15,6 +18,14 @@ export const fetchDeepSeekAPI = async (
   let answer = "";
 
   try {
+    // 更新上下文消息
+    conversationContext.push({ role: "user", content: message });
+
+    // 只保留最近的MAX_CONTEXT_LENGTH条消息
+    while (conversationContext.length > MAX_CONTEXT_LENGTH) {
+      conversationContext.shift();
+    }
+
     const response = await fetch(`${SILICONFLOW_API_URL}/chat/completions`, {
       method: "POST",
       headers: {
@@ -23,7 +34,7 @@ export const fetchDeepSeekAPI = async (
       },
       body: JSON.stringify({
         model: "deepseek-ai/DeepSeek-V3",
-        messages: [{ role: "user", content: message }],
+        messages: conversationContext,
         temperature: 0.7,
         stream: true,
       }),
@@ -59,6 +70,9 @@ export const fetchDeepSeekAPI = async (
         }
       }
     }
+
+    // 添加AI回复到上下文
+    conversationContext.push({ role: "assistant", content: answer });
 
     await saveMessageToServer(message, answer);
   } catch (error) {

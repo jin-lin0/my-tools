@@ -13,7 +13,7 @@ interface MainMenuProps {
 
 const MainMenu: React.FC<MainMenuProps> = ({ onAppSelect }) => {
   const apps: AppItem[] = [
-    { id: "ai-chat", name: "AI聊天应用", icon: "💬" },
+    { id: "ai-chat", name: "AI聊天助手", icon: "💬" },
     // 可以在这里添加更多应用
   ];
 
