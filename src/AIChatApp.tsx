@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AIChatApp.css";
-import {
-  SILICONFLOW_API_KEY,
-  SILICONFLOW_API_URL,
-  SERVER_API_URL,
-} from "./config";
+import { fetchDeepSeekAPI } from "./apiService";
 import ReactMarkdown from "react-markdown";
 
 interface Message {
@@ -80,91 +76,6 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
       console.error("API请求失败:", error);
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const fetchDeepSeekAPI = async (
-    message: string,
-    onChunk?: (chunk: string) => void
-  ): Promise<void> => {
-    let token = localStorage.getItem("deepseek_token") || "";
-    if (!token) {
-      token = SILICONFLOW_API_KEY || "";
-      if (!token) {
-        throw new Error("未设置DeepSeek API Token");
-      }
-    }
-    console.log("token", token);
-    let answer = "";
-
-    try {
-      const response = await fetch(`${SILICONFLOW_API_URL}/chat/completions`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          model: "deepseek-ai/DeepSeek-V3",
-          messages: [
-            {
-              role: "user",
-              content: message,
-            },
-          ],
-          temperature: 0.7,
-          stream: true,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API请求失败: ${response.status}`);
-      }
-
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-
-      while (reader) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value);
-        const lines = chunk.split("\n").filter((line) => line.trim() !== "");
-
-        for (const line of lines) {
-          const message = line.replace(/^data: /, "");
-          if (message === "[DONE]") {
-            break;
-          }
-
-          try {
-            const parsed = JSON.parse(message);
-            if (parsed.choices[0].delta?.content && onChunk) {
-              const content = parsed.choices[0].delta.content;
-              answer += content;
-              onChunk(content);
-            }
-          } catch (error) {
-            console.error("解析流数据错误:", error);
-          }
-        }
-      }
-
-      // 保存对话记录到后端
-      await fetch(`${SERVER_API_URL}/messages`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          question: message,
-          answer,
-          model: "deepseek-ai/DeepSeek-V3",
-        }),
-      });
-    } catch (error) {
-      console.error("API请求错误:", error);
-      throw error;
     }
   };
 
