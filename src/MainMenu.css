@@ -3,7 +3,14 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  animation: gradientAnimation 15s ease infinite;
+  animation: gradientAnimation 12s ease infinite;
+  background: linear-gradient(
+    -45deg,
+    rgba(238, 119, 82, 0.8),
+    rgba(231, 60, 126, 0.8),
+    rgba(35, 166, 213, 0.8),
+    rgba(35, 213, 171, 0.8)
+  );
   background-size: 400% 400%;
   height: 100vh;
   width: 100%;
@@ -15,9 +22,9 @@
 
 .main-menu h1 {
   font-size: 2.5rem;
-  color: #2d3748;
+  color: white;
   margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .app-grid {
@@ -82,23 +89,25 @@
 .app-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #4f46e5;
+  color: #333;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .app-name {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #1a202c;
+  color: #333;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 10% 10%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 90% 90%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 10% 10%;
   }
 }
