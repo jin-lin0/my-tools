@@ -276,11 +276,9 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
           defaultContactMaterial={{ restitution: 0.7 }}
         >
           <Plane />
-          <DraggableBox />
           {boxes.map((box) => (
             <DraggableBox key={box.id} position={box.position} />
           ))}
-          <DraggableSphere />
           {spheres.map((sphere) => (
             <DraggableSphere key={sphere.id} position={sphere.position} />
           ))}
