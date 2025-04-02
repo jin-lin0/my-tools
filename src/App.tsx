@@ -1,28 +1,46 @@
 import "./App.css";
 import MainMenu from "./MainMenu";
 import AIChatApp from "./AIChatApp";
-import { useState } from "react";
+import PhysicsSandbox from "./PhysicsSandbox";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 
 function App() {
-  const [currentView, setCurrentView] = useState<string>("main");
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const navigate = useNavigate();
 
   const handleAppSelect = (appId: string) => {
-    if (appId === "ai-chat") {
-      setCurrentView("ai-chat");
-    }
+    navigate(`/${appId}`);
   };
 
   const handleBackToMenu = () => {
-    setCurrentView("main");
+    navigate("/");
   };
 
   return (
     <div className="app">
-      {currentView === "main" ? (
-        <MainMenu onAppSelect={handleAppSelect} />
-      ) : (
-        <AIChatApp onBack={handleBackToMenu} />
-      )}
+      <Routes>
+        <Route path="/" element={<MainMenu onAppSelect={handleAppSelect} />} />
+        <Route
+          path="/ai-chat"
+          element={<AIChatApp onBack={handleBackToMenu} />}
+        />
+        <Route
+          path="/physics-sandbox"
+          element={<PhysicsSandbox onBack={handleBackToMenu} />}
+        />
+      </Routes>
     </div>
   );
 }

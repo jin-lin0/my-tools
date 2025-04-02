@@ -1,0 +1,15 @@
+.back-button {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: #cbd5e0;
+}

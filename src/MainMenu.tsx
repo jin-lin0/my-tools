@@ -14,6 +14,7 @@ interface MainMenuProps {
 const MainMenu: React.FC<MainMenuProps> = ({ onAppSelect }) => {
   const apps: AppItem[] = [
     { id: "ai-chat", name: "AI聊天助手", icon: "💬" },
+    { id: "physics-sandbox", name: "物理沙盒", icon: "🧊" },
     // 可以在这里添加更多应用
   ];
 

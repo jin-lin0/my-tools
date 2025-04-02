@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./AIChatApp.css";
 import { fetchDeepSeekAPI } from "./apiService";
 import ReactMarkdown from "react-markdown";
+import BackButton from "./components/BackButton";
 
 interface Message {
   id: string;
@@ -82,9 +83,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <button className="back-button" onClick={onBack}>
-          ←
-        </button>
+        <BackButton onBack={onBack} />
         <h2>AI聊天助手</h2>
       </div>
 
