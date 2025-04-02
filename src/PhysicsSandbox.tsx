@@ -47,7 +47,22 @@ function useDraggable(api: any) {
 }
 
 function DraggableBox(props: any) {
-  const [ref, api] = useBox(() => ({ mass: 1, position: [0, 5, 0], ...props }));
+  const [ref, api] = useBox(() => ({
+    mass: 1,
+    position: [0, 5, 0],
+    ...props,
+    onCollide: (e) => {
+      if (e.body.userData?.isSphere) {
+        const sphere = e.body;
+        const box = ref.current;
+        if (box && sphere && box.parent && sphere.parent) {
+          // 移除碰撞的立方体和小球
+          box.parent.remove(box);
+          sphere.parent.remove(sphere);
+        }
+      }
+    },
+  }));
   const { handlePointerDown, handlePointerUp } = useDraggable(api);
 
   return (
@@ -138,6 +153,7 @@ function DraggableSphere(props: any) {
     mass: 1,
     position: [2, 5, 0],
     ...props,
+    userData: { isSphere: true },
   }));
   const { handlePointerDown, handlePointerUp } = useDraggable(api);
 
