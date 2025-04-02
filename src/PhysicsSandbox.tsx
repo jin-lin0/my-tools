@@ -1,10 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
 import * as THREE from "three";
 import "./PhysicsSandbox.css";
 import BackButton from "./components/BackButton";
+
+const PARTICLE_COUNT = 1000;
+const PARTICLE_SIZE = 0.1;
 
 type PhysicsSandboxProps = {
   onBack: () => void;
@@ -60,6 +63,75 @@ function DraggableBox(props: any) {
   );
 }
 
+function SnowParticleSystem() {
+  const particlesRef = useRef<THREE.Points>(null);
+  const particlesGeometry = useRef<THREE.BufferGeometry>(null);
+  const particlesMaterial = useRef<THREE.PointsMaterial>(null);
+  const positionsArray = useRef<Float32Array>(
+    new Float32Array(PARTICLE_COUNT * 3)
+  );
+
+  const { width: screenWidth } = useThree().size;
+
+  useEffect(() => {
+    // 初始化粒子位置
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      const i3 = i * 3;
+      positionsArray.current[i3] =
+        (Math.random() - 0.5) * (screenWidth / 100) * 9;
+      positionsArray.current[i3 + 1] = Math.random() * 10;
+      positionsArray.current[i3 + 2] =
+        (Math.random() - 0.5) * (screenWidth / 100) * 9;
+    }
+    if (particlesGeometry.current) {
+      particlesGeometry.current.setAttribute(
+        "position",
+        new THREE.BufferAttribute(positionsArray.current, 3)
+      );
+    }
+  }, [screenWidth]);
+
+  useFrame(() => {
+    if (particlesRef.current) {
+      particlesRef.current.rotation.y += 0.001;
+
+      // 更新粒子位置模拟下落
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        const i3 = i * 3;
+        const y = positionsArray.current[i3 + 1];
+        const newY = y > -1 ? y - 0.1 : 10 + Math.random() * 5;
+        positionsArray.current[i3 + 1] = newY;
+      }
+
+      if (particlesGeometry.current) {
+        particlesGeometry.current.attributes.position.needsUpdate = true;
+      }
+    }
+  });
+
+  return (
+    <points ref={particlesRef}>
+      <bufferGeometry ref={particlesGeometry}>
+        <bufferAttribute
+          attach="attributes-position"
+          count={PARTICLE_COUNT}
+          array={positionsArray.current}
+          itemSize={3}
+          args={[positionsArray.current, 3]}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        ref={particlesMaterial}
+        color="#00aaff"
+        size={PARTICLE_SIZE}
+        transparent
+        opacity={0.8}
+        blending={THREE.AdditiveBlending}
+      />
+    </points>
+  );
+}
+
 function DraggableSphere(props: any) {
   const [ref, api] = useSphere(() => ({
     mass: 1,
@@ -103,6 +175,7 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
   const [boxes, setBoxes] = useState<
     Array<{ id: number; position: [number, number, number] }>
   >([]);
+  const [isPouring, setIsPouring] = useState(false);
 
   const addSphere = () => {
     const newSphere = {
@@ -142,6 +215,9 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
         </div>
         <div className="add-shape" onClick={addBox}>
           添加立方体
+        </div>
+        <div className="add-shape" onClick={() => setIsPouring(!isPouring)}>
+          下雪
         </div>
         <div className="reset-button" onClick={resetScene}>
           <svg
@@ -185,6 +261,7 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
           {spheres.map((sphere) => (
             <DraggableSphere key={sphere.id} position={sphere.position} />
           ))}
+          {isPouring && <SnowParticleSystem />}
         </Physics>
         <OrbitControls makeDefault enabled={false} />
       </Canvas>
