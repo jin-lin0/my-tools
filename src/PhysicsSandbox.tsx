@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, useTexture } from "@react-three/drei";
 import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
+import * as THREE from "three";
 import "./PhysicsSandbox.css";
 import BackButton from "./components/BackButton";
 
@@ -19,7 +20,6 @@ function useDraggable(api: any) {
     if (intersects.length > 0) {
       const { point } = intersects[0];
       api.position.set(point.x, point.y, point.z);
-      api.velocity.set(0, 0, 0);
     }
   };
 
@@ -84,10 +84,14 @@ function DraggableSphere(props: any) {
 
 function Plane(props: any) {
   const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0], ...props }));
+  const texture = useTexture("/src/assets/imgs/wood_floor_4k.jpg");
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(10, 10);
   return (
     <mesh ref={ref} receiveShadow>
-      <planeGeometry args={[100, 100]} />
-      <meshStandardMaterial color="lightblue" />
+      <planeGeometry args={[200, 200]} />
+      <meshStandardMaterial map={texture} roughness={0.8} metalness={0.2} />
     </mesh>
   );
 }
