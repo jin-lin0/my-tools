@@ -5,6 +5,7 @@ import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
 import * as THREE from "three";
 import "./PhysicsSandbox.css";
 import BackButton from "./components/BackButton";
+import Loading from "./components/Loading";
 
 const PARTICLE_COUNT = 1000;
 const PARTICLE_SIZE = 0.1;
@@ -176,6 +177,7 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
     Array<{ id: number; position: [number, number, number] }>
   >([]);
   const [isPouring, setIsPouring] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const addSphere = () => {
     const newSphere = {
@@ -208,6 +210,7 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
 
   return (
     <div className="physics-sandbox">
+      {isLoading && <Loading />}
       <BackButton onBack={onBack} />
       <div className="button-group">
         <div className="add-shape" onClick={addSphere}>
@@ -234,7 +237,11 @@ export default function PhysicsSandbox({ onBack }: PhysicsSandboxProps) {
           </svg>
         </div>
       </div>
-      <Canvas shadows camera={{ position: [0, 15, 30], fov: 50 }}>
+      <Canvas
+        shadows
+        camera={{ position: [0, 15, 30], fov: 50 }}
+        onCreated={() => setIsLoading(false)}
+      >
         <ambientLight intensity={0.5} />
         <directionalLight
           position={[10, 10, 5]}
