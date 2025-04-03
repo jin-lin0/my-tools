@@ -173,7 +173,7 @@ function DraggableSphere(props: any) {
 
 function Plane(props: any) {
   const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0], ...props }));
-  const texture = useTexture("/src/assets/imgs/wood_floor_4k.jpg");
+  const texture = useTexture("./assets/imgs/wood_floor_4k.jpg");
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set(10, 10);
