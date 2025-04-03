@@ -12,5 +12,5 @@ body {
 
 @font-face {
   font-family: "DingLieXiDa";
-  src: url("./assets/dingliexidafont.ttf");
+  src: url("/dingliexidafont.ttf");
 }

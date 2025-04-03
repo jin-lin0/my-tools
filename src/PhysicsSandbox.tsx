@@ -6,6 +6,7 @@ import * as THREE from "three";
 import "./PhysicsSandbox.css";
 import BackButton from "./components/BackButton";
 import Loading from "./components/Loading";
+import floorTexture from "./assets/imgs/wood_floor_4k.jpg";
 
 const PARTICLE_COUNT = 1000;
 const PARTICLE_SIZE = 0.1;
@@ -173,7 +174,7 @@ function DraggableSphere(props: any) {
 
 function Plane(props: any) {
   const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0], ...props }));
-  const texture = useTexture("./assets/imgs/wood_floor_4k.jpg");
+  const texture = useTexture(floorTexture);
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set(10, 10);
