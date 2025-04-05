@@ -1,0 +1,1258 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "url": "https://reactjs.org",
+    "category": "🌐 前端框架",
+    "description": "构建用户界面的现代 JavaScript 库",
+    "icon": "⚛️"
+  },
+  {
+    "id": 2,
+    "name": "Vue.js",
+    "url": "https://vuejs.org",
+    "category": "🌐 前端框架",
+    "description": "渐进式 JavaScript 框架",
+    "icon": "🟢"
+  },
+  {
+    "id": 3,
+    "name": "Angular",
+    "url": "https://angular.io",
+    "category": "🌐 前端框架",
+    "description": "由 Google 维护的现代 Web 应用平台",
+    "icon": "🅰️"
+  },
+  {
+    "id": 5,
+    "name": "Next.js",
+    "url": "https://nextjs.org",
+    "category": "🌐 前端框架",
+    "description": "React 的服务端渲染框架",
+    "icon": "➡️"
+  },
+  {
+    "id": 7,
+    "name": "Gatsby",
+    "url": "https://www.gatsbyjs.com",
+    "category": "🌐 前端框架",
+    "description": "基于 React 的静态网站生成器",
+    "icon": "🌐"
+  },
+  {
+    "id": 8,
+    "name": "Bootstrap",
+    "url": "https://getbootstrap.com",
+    "category": "🎨 UI 设计",
+    "description": "流行的前端组件库",
+    "icon": "🅱️"
+  },
+  {
+    "id": 9,
+    "name": "Tailwind CSS",
+    "url": "https://tailwindcss.com",
+    "category": "🎨 UI 设计",
+    "description": "实用优先的 CSS 框架",
+    "icon": "💨"
+  },
+  {
+    "id": 10,
+    "name": "Material-UI",
+    "url": "https://mui.com",
+    "category": "🎨 UI 设计",
+    "description": "React 的 Material Design 组件库",
+    "icon": "🎛️"
+  },
+  {
+    "id": 13,
+    "name": "Foundation",
+    "url": "https://get.foundation",
+    "category": "🎨 UI 设计",
+    "description": "响应式前端框架",
+    "icon": "🏗️"
+  },
+  {
+    "id": 14,
+    "name": "Bulma",
+    "url": "https://bulma.io",
+    "category": "🎨 UI 设计",
+    "description": "现代 CSS 框架",
+    "icon": "📦"
+  },
+  {
+    "id": 15,
+    "name": "Figma",
+    "url": "https://www.figma.com",
+    "category": "🎨 UI 设计",
+    "description": "协作界面设计工具",
+    "icon": "🎨"
+  },
+  {
+    "id": 16,
+    "name": "Sketch",
+    "url": "https://www.sketch.com",
+    "category": "🎨 UI 设计",
+    "description": "数字设计工具",
+    "icon": "✏️"
+  },
+  {
+    "id": 17,
+    "name": "Adobe XD",
+    "url": "https://www.adobe.com/products/xd.html",
+    "category": "🎨 UI 设计",
+    "description": "用户体验设计软件",
+    "icon": "🅰️"
+  },
+  {
+    "id": 18,
+    "name": "InVision",
+    "url": "https://www.invisionapp.com",
+    "category": "🎨 UI 设计",
+    "description": "数字产品设计平台",
+    "icon": "👁️"
+  },
+  {
+    "id": 19,
+    "name": "Affinity Designer",
+    "url": "https://affinity.serif.com/en-us/designer/",
+    "category": "🎨 UI 设计",
+    "description": "专业图形设计软件",
+    "icon": "🎨"
+  },
+  {
+    "id": 20,
+    "name": "Framer",
+    "url": "https://www.framer.com",
+    "category": "🎨 UI 设计",
+    "description": "交互式设计工具",
+    "icon": "📱"
+  },
+  {
+    "id": 21,
+    "name": "Webflow",
+    "url": "https://webflow.com",
+    "category": "🎨 UI 设计",
+    "description": "无代码网站构建平台",
+    "icon": "🌐"
+  },
+  {
+    "id": 22,
+    "name": "CodePen",
+    "url": "https://codepen.io",
+    "category": "🛠️ 开发工具",
+    "description": "前端代码演示和分享平台",
+    "icon": "🖋️"
+  },
+  {
+    "id": 23,
+    "name": "JSFiddle",
+    "url": "https://jsfiddle.net",
+    "category": "🛠️ 开发工具",
+    "description": "在线编辑、分享和演示代码片段",
+    "icon": "🎛️"
+  },
+  {
+    "id": 24,
+    "name": "StackBlitz",
+    "url": "https://stackblitz.com",
+    "category": "🛠️ 开发工具",
+    "description": "基于浏览器的在线开发环境",
+    "icon": "⚡"
+  },
+  {
+    "id": 25,
+    "name": "Codesandbox",
+    "url": "https://codesandbox.io",
+    "category": "🛠️ 开发工具",
+    "description": "用于 Web 应用快速原型开发的平台",
+    "icon": "📦"
+  },
+  {
+    "id": 26,
+    "name": "PlayCode",
+    "url": "https://playcode.io",
+    "category": "🛠️ 开发工具",
+    "description": "即写即用的 JavaScript playground",
+    "icon": "▶️"
+  },
+  {
+    "id": 29,
+    "name": "Stylelint",
+    "url": "https://stylelint.io",
+    "category": "🛠️ 开发工具",
+    "description": "CSS 的样式检查工具",
+    "icon": "🎨"
+  },
+  {
+    "id": 32,
+    "name": "Moment.js",
+    "url": "https://momentjs.com",
+    "category": "📦 工具库",
+    "description": "经典的时间处理库",
+    "icon": "⏰"
+  },
+  {
+    "id": 34,
+    "name": "Fetch API",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+    "category": "📚 学习资源",
+    "description": "原生 JavaScript 异步请求接口",
+    "icon": "📡"
+  },
+  {
+    "id": 35,
+    "name": "MDN Web Docs",
+    "url": "https://developer.mozilla.org",
+    "category": "📚 学习资源",
+    "description": "最权威的 Web 技术文档平台",
+    "icon": "📘"
+  },
+  {
+    "id": 37,
+    "name": "JavaScript Info",
+    "url": "https://javascript.info",
+    "category": "📚 学习资源",
+    "description": "全面系统的 JS 教程",
+    "icon": "📕"
+  },
+  {
+    "id": 38,
+    "name": "FreeCodeCamp",
+    "url": "https://www.freecodecamp.org",
+    "category": "📚 学习资源",
+    "description": "免费编程学习平台",
+    "icon": "🎓"
+  },
+  {
+    "id": 39,
+    "name": "Frontend Masters",
+    "url": "https://frontendmasters.com",
+    "category": "📚 学习资源",
+    "description": "专业前端开发课程平台",
+    "icon": "🏫"
+  },
+  {
+    "id": 40,
+    "name": "CSS Tricks",
+    "url": "https://css-tricks.com",
+    "category": "📚 学习资源",
+    "description": "CSS 高级技巧和前端知识博客",
+    "icon": "✨"
+  },
+  {
+    "id": 42,
+    "name": "Shadcn UI",
+    "url": "https://ui.shadcn.com",
+    "category": "🎨 UI 设计",
+    "description": "基于 Radix 的现代 React UI 库",
+    "icon": "🧱"
+  },
+  {
+    "id": 43,
+    "name": "Iconify",
+    "url": "https://iconify.design",
+    "category": "🎨 UI 设计",
+    "description": "提供上百种图标库的统一接口",
+    "icon": "🔣"
+  },
+  {
+    "id": 44,
+    "name": "Lucide",
+    "url": "https://lucide.dev",
+    "category": "🎨 UI 设计",
+    "description": "美观的开源图标库",
+    "icon": "🔍"
+  },
+  {
+    "id": 46,
+    "name": "Dribbble",
+    "url": "https://dribbble.com",
+    "category": "🎨 UI 设计",
+    "description": "设计师作品展示平台，获取 UI 灵感的重要来源",
+    "icon": "🏀"
+  },
+  {
+    "id": 47,
+    "name": "Behance",
+    "url": "https://www.behance.net",
+    "category": "🎨 UI 设计",
+    "description": "Adobe 旗下的创意作品社区，聚焦视觉和交互设计",
+    "icon": "🎨"
+  },
+  {
+    "id": 48,
+    "name": "CSSBattle",
+    "url": "https://cssbattle.dev",
+    "category": "🎮 编程挑战",
+    "description": "通过 CSS 重现目标图形，提升 CSS 编写能力",
+    "icon": "⚔️"
+  },
+  {
+    "id": 49,
+    "name": "Frontend Mentor",
+    "url": "https://www.frontendmentor.io",
+    "category": "🎮 编程挑战",
+    "description": "通过真实 UI 设计挑战练习前端技能",
+    "icon": "🎯"
+  },
+  {
+    "id": 50,
+    "name": "Codewars",
+    "url": "https://www.codewars.com",
+    "category": "🎮 编程挑战",
+    "description": "提升算法能力的代码挑战平台，支持 JS/TS",
+    "icon": "🥋"
+  },
+  {
+    "id": 51,
+    "name": "LeetCode",
+    "url": "https://leetcode.cn",
+    "category": "🎮 编程挑战",
+    "description": "刷题练习平台，前端算法能力提升首选",
+    "icon": "🧠"
+  },
+  {
+    "id": 52,
+    "name": "Netlify",
+    "url": "https://www.netlify.com",
+    "category": "🚀 部署平台",
+    "description": "前端静态站点部署平台，支持 CI/CD 自动化构建",
+    "icon": "☁️"
+  },
+  {
+    "id": 53,
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "category": "🚀 部署平台",
+    "description": "为 Next.js 提供优化支持的现代部署平台",
+    "icon": "🚀"
+  },
+  {
+    "id": 54,
+    "name": "Surge",
+    "url": "https://surge.sh",
+    "category": "🚀 部署平台",
+    "description": "简单快速部署静态页面的工具",
+    "icon": "🌊"
+  },
+  {
+    "id": 55,
+    "name": "Render",
+    "url": "https://render.com",
+    "category": "🚀 部署平台",
+    "description": "支持前后端一体部署的现代化平台",
+    "icon": "⚙️"
+  },
+  {
+    "id": 56,
+    "name": "Cloudflare Pages",
+    "url": "https://pages.cloudflare.com",
+    "category": "🚀 部署平台",
+    "description": "Cloudflare 推出的静态站点托管方案，性能优异",
+    "icon": "🛡️"
+  },
+  {
+    "id": 57,
+    "name": "GitHub Pages",
+    "url": "https://pages.github.com",
+    "category": "🚀 部署平台",
+    "description": "GitHub 自带的静态站点托管方案",
+    "icon": "📦"
+  },
+  {
+    "id": 58,
+    "name": "PNPM",
+    "url": "https://pnpm.io",
+    "category": "🛠️ 开发工具",
+    "description": "极速、节省磁盘空间的包管理工具",
+    "icon": "📁"
+  },
+  {
+    "id": 59,
+    "name": "Turbopack",
+    "url": "https://turbo.build/pack",
+    "category": "🛠️ 开发工具",
+    "description": "由 Vercel 推出的 Web 构建工具，Next.js 默认支持",
+    "icon": "💨"
+  },
+  {
+    "id": 60,
+    "name": "ESBuild",
+    "url": "https://esbuild.github.io",
+    "category": "🛠️ 开发工具",
+    "description": "极快的 JavaScript 打包工具",
+    "icon": "⚡"
+  },
+  {
+    "id": 61,
+    "name": "SWC",
+    "url": "https://swc.rs",
+    "category": "🛠️ 开发工具",
+    "description": "Rust 编写的 JavaScript 编译器，速度快于 Babel",
+    "icon": "🧬"
+  },
+  {
+    "id": 62,
+    "name": "Webpack",
+    "url": "https://webpack.js.org",
+    "category": "🛠️ 开发工具",
+    "description": "历史悠久的模块打包工具，配置灵活",
+    "icon": "🛠️"
+  },
+  {
+    "id": 63,
+    "name": "Rollup",
+    "url": "https://rollupjs.org",
+    "category": "🛠️ 开发工具",
+    "description": "专注于打包库的轻量工具，tree-shaking 表现优秀",
+    "icon": "📦"
+  },
+  {
+    "id": 64,
+    "name": "Babel",
+    "url": "https://babeljs.io",
+    "category": "🛠️ 开发工具",
+    "description": "JavaScript 编译器，支持新特性转译",
+    "icon": "🔧"
+  },
+  {
+    "id": 65,
+    "name": "Lighthouse",
+    "url": "https://developers.google.com/web/tools/lighthouse",
+    "category": "📊 性能优化",
+    "description": "Google 推出的性能分析工具，可在 Chrome DevTools 中使用",
+    "icon": "🔦"
+  },
+  {
+    "id": 66,
+    "name": "Sentry",
+    "url": "https://sentry.io",
+    "category": "📊 性能优化",
+    "description": "前端后端统一的实时错误监控平台",
+    "icon": "🧭"
+  },
+  {
+    "id": 67,
+    "name": "LogRocket",
+    "url": "https://logrocket.com",
+    "category": "📊 性能优化",
+    "description": "录屏加性能分析的前端行为追踪工具",
+    "icon": "📹"
+  },
+  {
+    "id": 68,
+    "name": "WebPageTest",
+    "url": "https://www.webpagetest.org",
+    "category": "📊 性能优化",
+    "description": "全面测试网页加载速度和用户体验",
+    "icon": "📊"
+  },
+  {
+    "id": 69,
+    "name": "Perfume.js",
+    "url": "https://github.com/Zizzamia/perfume.js",
+    "category": "📊 性能优化",
+    "description": "轻量级前端性能指标收集工具",
+    "icon": "🧪"
+  },
+  {
+    "id": 70,
+    "name": "Calibre",
+    "url": "https://calibreapp.com",
+    "category": "📊 性能优化",
+    "description": "性能预算管理和性能回归检测工具",
+    "icon": "📈"
+  },
+  {
+    "id": 72,
+    "name": "Heroicons",
+    "url": "https://heroicons.com",
+    "category": "🎨 UI 设计",
+    "description": "Tailwind 团队出品的免费高质量图标库",
+    "icon": "🦸"
+  },
+  {
+    "id": 73,
+    "name": "Undraw",
+    "url": "https://undraw.co/illustrations",
+    "category": "🎨 UI 设计",
+    "description": "开源插画库，支持自定义颜色，适合网站封面使用",
+    "icon": "🎨"
+  },
+  {
+    "id": 74,
+    "name": "LottieFiles",
+    "url": "https://lottiefiles.com",
+    "category": "🎨 UI 设计",
+    "description": "丰富的 JSON 动画资源，适合移动端和网页交互",
+    "icon": "🎞️"
+  },
+  {
+    "id": 75,
+    "name": "Flaticon",
+    "url": "https://www.flaticon.com",
+    "category": "🎨 UI 设计",
+    "description": "百万级图标素材资源，支持 SVG/PNG 下载",
+    "icon": "📦"
+  },
+  {
+    "id": 76,
+    "name": "Coolors",
+    "url": "https://coolors.co",
+    "category": "🎨 UI 设计",
+    "description": "配色方案生成器，适合 UI 初稿构思",
+    "icon": "🌈"
+  },
+  {
+    "id": 77,
+    "name": "CSS Gradient",
+    "url": "https://cssgradient.io",
+    "category": "🎨 UI 设计",
+    "description": "可视化渐变色生成器，附带 CSS 代码",
+    "icon": "🌅"
+  },
+  {
+    "id": 78,
+    "name": "Haikei",
+    "url": "https://app.haikei.app",
+    "category": "🎨 UI 设计",
+    "description": "SVG 背景生成工具，适合制作现代感网页背景",
+    "icon": "🌀"
+  },
+  {
+    "id": 79,
+    "name": "SVG Repo",
+    "url": "https://www.svgrepo.com",
+    "category": "🎨 UI 设计",
+    "description": "海量 SVG 图形资源，可商用",
+    "icon": "📁"
+  },
+  {
+    "id": 80,
+    "name": "Remove.bg",
+    "url": "https://remove.bg",
+    "category": "🎨 UI 设计",
+    "description": "AI 图像抠图工具，适合快速生成透明背景",
+    "icon": "✂️"
+  },
+  {
+    "id": 81,
+    "name": "Photopea",
+    "url": "https://www.photopea.com",
+    "category": "🎨 UI 设计",
+    "description": "网页版 Photoshop 替代品，支持 PSD 编辑",
+    "icon": "🖼️"
+  },
+  {
+    "id": 82,
+    "name": "Canva",
+    "url": "https://www.canva.com",
+    "category": "🎨 UI 设计",
+    "description": "轻量级在线设计工具，适合快速做图",
+    "icon": "📐"
+  },
+  {
+    "id": 83,
+    "name": "Tabler Icons",
+    "url": "https://tabler-icons.io",
+    "category": "🎨 UI 设计",
+    "description": "免费开源图标库，设计简洁现代",
+    "icon": "🧭"
+  },
+  {
+    "id": 84,
+    "name": "Color Hunt",
+    "url": "https://colorhunt.co",
+    "category": "🎨 UI 设计",
+    "description": "社区驱动的配色灵感库，适合 UI 初稿参考",
+    "icon": "🎨"
+  },
+  {
+    "id": 87,
+    "name": "Svelte",
+    "url": "https://svelte.dev",
+    "category": "🌐 前端框架",
+    "description": "编译型前端框架，零运行时、性能极致",
+    "icon": "🔥"
+  },
+  {
+    "id": 88,
+    "name": "SolidJS",
+    "url": "https://www.solidjs.com",
+    "category": "🌐 前端框架",
+    "description": "高性能响应式框架，拥有编译期优化",
+    "icon": "🧱"
+  },
+  {
+    "id": 90,
+    "name": "Nuxt.js",
+    "url": "https://nuxt.com",
+    "category": "🌐 前端框架",
+    "description": "Vue 生态中的 SSR 框架，支持 SPA/SSR/SSG",
+    "icon": "🌙"
+  },
+  {
+    "id": 91,
+    "name": "Remix",
+    "url": "https://remix.run",
+    "category": "🌐 前端框架",
+    "description": "强调原生 Web API 的现代 React 框架",
+    "icon": "🎛️"
+  },
+  {
+    "id": 92,
+    "name": "Vite",
+    "url": "https://vitejs.dev",
+    "category": "🛠️ 开发工具",
+    "description": "由 Evan You 开发的极速构建工具，原生 ESM 支持",
+    "icon": "⚡"
+  },
+  {
+    "id": 93,
+    "name": "Astro",
+    "url": "https://astro.build",
+    "category": "🌐 前端框架",
+    "description": "适合内容网站构建的框架，支持零 JS 和多框架组合",
+    "icon": "🚀"
+  },
+  {
+    "id": 94,
+    "name": "Qwik",
+    "url": "https://qwik.builder.io",
+    "category": "🌐 前端框架",
+    "description": "以延迟加载为核心设计理念的前端框架",
+    "icon": "🔧"
+  },
+  {
+    "id": 96,
+    "name": "DevDocs",
+    "url": "https://devdocs.io",
+    "category": "📚 学习资源",
+    "description": "聚合多个开发技术文档，支持离线使用",
+    "icon": "📚"
+  },
+  {
+    "id": 97,
+    "name": "Can I use",
+    "url": "https://caniuse.com",
+    "category": "📚 学习资源",
+    "description": "前端 API/属性的兼容性查询网站",
+    "icon": "🧪"
+  },
+  {
+    "id": 98,
+    "name": "W3Schools",
+    "url": "https://w3schools.com",
+    "category": "📚 学习资源",
+    "description": "老牌 Web 教学平台，适合初学者",
+    "icon": "🏫"
+  },
+  {
+    "id": 99,
+    "name": "TypeScript Docs",
+    "url": "https://www.typescriptlang.org/docs",
+    "category": "📚 学习资源",
+    "description": "TypeScript 官方文档",
+    "icon": "🔤"
+  },
+  {
+    "id": 100,
+    "name": "ECMAScript Spec",
+    "url": "https://tc39.es/ecma262",
+    "category": "📚 学习资源",
+    "description": "JavaScript 标准规范（高级查阅）",
+    "icon": "📑"
+  },
+  {
+    "id": 101,
+    "name": "HTML Living Standard",
+    "url": "https://html.spec.whatwg.org",
+    "category": "📚 学习资源",
+    "description": "HTML 规范文档，适合查找语义化特性",
+    "icon": "📄"
+  },
+  {
+    "id": 102,
+    "name": "Node.js Docs",
+    "url": "https://nodejs.org/en/docs",
+    "category": "📚 学习资源",
+    "description": "Node.js 官方 API 和模块文档",
+    "icon": "🟩"
+  },
+  {
+    "id": 103,
+    "name": "ESLint Rules",
+    "url": "https://eslint.org/docs/latest/rules",
+    "category": "📚 学习资源",
+    "description": "前端开发中的 Lint 规则查阅入口",
+    "icon": "🧹"
+  },
+  {
+    "id": 104,
+    "name": "TC39 Proposals",
+    "url": "https://github.com/tc39/proposals",
+    "category": "📚 学习资源",
+    "description": "JavaScript 提案的完整列表和进度追踪",
+    "icon": "📝"
+  },
+  {
+    "id": 105,
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "🤖 AI 工具",
+    "description": "GitHub 推出的 AI 编码助手，基于 OpenAI Codex",
+    "icon": "🤖"
+  },
+  {
+    "id": 106,
+    "name": "Cursor",
+    "url": "https://www.cursor.so",
+    "category": "🤖 AI 工具",
+    "description": "基于 GPT 的 VS Code 替代 IDE，支持代码解释、生成和重构",
+    "icon": "🧬"
+  },
+  {
+    "id": 107,
+    "name": "Codeium",
+    "url": "https://codeium.com",
+    "category": "🤖 AI 工具",
+    "description": "免费 AI 编程助手，支持多种语言和 IDE",
+    "icon": "💡"
+  },
+  {
+    "id": 108,
+    "name": "Bito AI",
+    "url": "https://bito.ai",
+    "category": "🤖 AI 工具",
+    "description": "专为开发者设计的 AI 编程助手，可嵌入 IDE",
+    "icon": "🛠️"
+  },
+  {
+    "id": 109,
+    "name": "Amazon CodeWhisperer",
+    "url": "https://aws.amazon.com/codewhisperer",
+    "category": "🤖 AI 工具",
+    "description": "由 AWS 提供的 AI 编码生成工具，支持 JavaScript 等主流语言",
+    "icon": "🌩️"
+  },
+  {
+    "id": 110,
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com",
+    "category": "🤖 AI 工具",
+    "description": "基于机器学习的代码自动补全工具，注重本地隐私",
+    "icon": "🧠"
+  },
+  {
+    "id": 111,
+    "name": "AI Code Reviewer",
+    "url": "https://reviewpad.com",
+    "category": "🤖 AI 工具",
+    "description": "自动化 PR 审查和改进建议平台",
+    "icon": "📋"
+  },
+  {
+    "id": 112,
+    "name": "Blackbox AI",
+    "url": "https://www.useblackbox.io",
+    "category": "🤖 AI 工具",
+    "description": "代码搜索与实时注释 AI 助手，适合前端代码重用",
+    "icon": "🔍"
+  },
+  {
+    "id": 113,
+    "name": "Sourcegraph Cody",
+    "url": "https://sourcegraph.com/cody",
+    "category": "🤖 AI 工具",
+    "description": "支持大型代码库导航和 AI 问答的增强 IDE 工具",
+    "icon": "📎"
+  },
+  {
+    "id": 114,
+    "name": "Code Interpreter (OpenAI)",
+    "url": "https://platform.openai.com",
+    "category": "🤖 AI 工具",
+    "description": "用于代码分析、重构和解释的高级 AI 工具，基于 GPT",
+    "icon": "🧾"
+  },
+  {
+    "id": 115,
+    "name": "ECharts",
+    "url": "https://echarts.apache.org",
+    "category": "📊 数据可视化",
+    "description": "百度开源的强大图表库，适合仪表盘与大屏",
+    "icon": "📈"
+  },
+  {
+    "id": 119,
+    "name": "AntV G2",
+    "url": "https://g2.antv.vision",
+    "category": "📊 数据可视化",
+    "description": "蚂蚁金服推出的统计图形语法图表库",
+    "icon": "🔺"
+  },
+  {
+    "id": 120,
+    "name": "AntV L7",
+    "url": "https://l7.antv.vision",
+    "category": "📊 数据可视化",
+    "description": "地理可视化图形库，适合地图业务展示",
+    "icon": "🗺️"
+  },
+  {
+    "id": 122,
+    "name": "Visx",
+    "url": "https://airbnb.io/visx",
+    "category": "📊 数据可视化",
+    "description": "由 Airbnb 开源，结合 D3 和 React 的轻量图表库",
+    "icon": "🛰️"
+  },
+  {
+    "id": 123,
+    "name": "Observable",
+    "url": "https://observablehq.com",
+    "category": "📊 数据可视化",
+    "description": "交互式数据笔记本平台，支持 D3 等图表组件",
+    "icon": "📓"
+  },
+  {
+    "id": 125,
+    "name": "Lodash",
+    "url": "https://lodash.com",
+    "category": "📦 工具库",
+    "description": "最广泛使用的 JavaScript 工具库，提供实用的函数集合",
+    "icon": "🔧"
+  },
+  {
+    "id": 126,
+    "name": "Day.js",
+    "url": "https://day.js.org",
+    "category": "📦 工具库",
+    "description": "轻量级时间处理库，API 与 Moment.js 兼容",
+    "icon": "⏰"
+  },
+  {
+    "id": 127,
+    "name": "Zod",
+    "url": "https://zod.dev",
+    "category": "📦 工具库",
+    "description": "TypeScript 优先的数据校验库，适合构建表单与 API schema",
+    "icon": "🧪"
+  },
+  {
+    "id": 128,
+    "name": "Axios",
+    "url": "https://axios-http.com",
+    "category": "📦 工具库",
+    "description": "基于 Promise 的 HTTP 客户端，前后端通用",
+    "icon": "🌐"
+  },
+  {
+    "id": 129,
+    "name": "SWR",
+    "url": "https://swr.vercel.app",
+    "category": "📦 工具库",
+    "description": "Vercel 推出的数据请求库，支持缓存、自动请求等",
+    "icon": "🔄"
+  },
+  {
+    "id": 130,
+    "name": "TanStack Query",
+    "url": "https://tanstack.com/query",
+    "category": "📦 工具库",
+    "description": "强大的 React/Vue/Solid 查询状态管理库（原 React Query）",
+    "icon": "📥"
+  },
+  {
+    "id": 131,
+    "name": "Prettier",
+    "url": "https://prettier.io",
+    "category": "🛠️ 开发工具",
+    "description": "强制一致的代码格式化工具，支持多语言",
+    "icon": "🎨"
+  },
+  {
+    "id": 132,
+    "name": "ESLint",
+    "url": "https://eslint.org",
+    "category": "🛠️ 开发工具",
+    "description": "JavaScript 静态代码检查工具，可结合 Prettier 使用",
+    "icon": "🕵️‍♂️"
+  },
+  {
+    "id": 133,
+    "name": "classnames",
+    "url": "https://www.npmjs.com/package/classnames",
+    "category": "📦 工具库",
+    "description": "用于拼接 class 字符串的小巧库",
+    "icon": "🧵"
+  },
+  {
+    "id": 134,
+    "name": "uuid",
+    "url": "https://www.npmjs.com/package/uuid",
+    "category": "📦 工具库",
+    "description": "生成唯一标识符的工具，常用于前端标识或缓存控制",
+    "icon": "🔑"
+  },
+  {
+    "id": 135,
+    "name": "React Developer Tools",
+    "url": "https://reactjs.org/blog/2019/08/15/new-react-devtools.html",
+    "category": "🔧 浏览器插件",
+    "description": "React 官方调试插件，可查看组件树与状态",
+    "icon": "⚛️"
+  },
+  {
+    "id": 136,
+    "name": "Redux DevTools",
+    "url": "https://github.com/reduxjs/redux-devtools",
+    "category": "🔧 浏览器插件",
+    "description": "Redux 状态调试工具，支持时间旅行等功能",
+    "icon": "🧭"
+  },
+  {
+    "id": 137,
+    "name": "Vue.js devtools",
+    "url": "https://github.com/vuejs/devtools",
+    "category": "🔧 浏览器插件",
+    "description": "Vue 官方调试插件，查看响应式状态和组件结构",
+    "icon": "🖼️"
+  },
+  {
+    "id": 138,
+    "name": "Wappalyzer",
+    "url": "https://www.wappalyzer.com",
+    "category": "🔧 浏览器插件",
+    "description": "识别网站使用的技术栈（框架、语言、服务器等）",
+    "icon": "🔎"
+  },
+  {
+    "id": 139,
+    "name": "WhatRuns",
+    "url": "https://www.whatruns.com",
+    "category": "🔧 浏览器插件",
+    "description": "类似 Wappalyzer，可识别第三方服务与框架",
+    "icon": "🧠"
+  },
+  {
+    "id": 140,
+    "name": "JSON Viewer",
+    "url": "https://chrome.google.com/webstore/detail/json-viewer/aimiinbnnkboelefkjlenlgimcabobli",
+    "category": "🔧 浏览器插件",
+    "description": "美化浏览器中展示的 JSON 数据，支持折叠",
+    "icon": "📄"
+  },
+  {
+    "id": 141,
+    "name": "Octotree",
+    "url": "https://www.octotree.io",
+    "category": "🔧 浏览器插件",
+    "description": "为 GitHub 添加代码树视图的插件，提升代码浏览效率",
+    "icon": "🌳"
+  },
+  {
+    "id": 143,
+    "name": "VisBug",
+    "url": "https://github.com/GoogleChromeLabs/ProjectVisBug",
+    "category": "🔧 浏览器插件",
+    "description": "可视化调试 CSS/布局的设计辅助插件",
+    "icon": "🎯"
+  },
+  {
+    "id": 144,
+    "name": "CSS Peeper",
+    "url": "https://csspeeper.com",
+    "category": "🔧 浏览器插件",
+    "description": "查看网站 CSS 样式与调色板的视觉化工具",
+    "icon": "👀"
+  },
+  {
+    "id": 145,
+    "name": "Material UI",
+    "url": "https://mui.com",
+    "category": "🎨 UI 设计",
+    "description": "Google Material Design 实现的 React UI 库，组件丰富，支持主题定制",
+    "icon": "📐"
+  },
+  {
+    "id": 146,
+    "name": "Ant Design",
+    "url": "https://ant.design",
+    "category": "🎨 UI 设计",
+    "description": "阿里出品的 React 企业级组件库，中文社区活跃",
+    "icon": "🐜"
+  },
+  {
+    "id": 147,
+    "name": "ShadCN UI",
+    "url": "https://ui.shadcn.dev",
+    "category": "🎨 UI 设计",
+    "description": "基于 Radix UI + Tailwind + Next.js 的现代化组件库，设计极简美观",
+    "icon": "🌒"
+  },
+  {
+    "id": 148,
+    "name": "Chakra UI",
+    "url": "https://chakra-ui.com",
+    "category": "🎨 UI 设计",
+    "description": "为 React 提供可组合、可访问性的 UI 组件库",
+    "icon": "💠"
+  },
+  {
+    "id": 149,
+    "name": "Radix UI",
+    "url": "https://www.radix-ui.com",
+    "category": "🎨 UI 设计",
+    "description": "构建可访问原子级别组件的工具集，适合自己定制样式",
+    "icon": "🔬"
+  },
+  {
+    "id": 150,
+    "name": "Tailwind UI",
+    "url": "https://tailwindui.com",
+    "category": "🎨 UI 设计",
+    "description": "Tailwind CSS 官方设计组件集，适合快速构建现代页面",
+    "icon": "🎛️"
+  },
+  {
+    "id": 151,
+    "name": "Headless UI",
+    "url": "https://headlessui.com",
+    "category": "🎨 UI 设计",
+    "description": "无样式的完全可访问组件，与 Tailwind 完美结合",
+    "icon": "🧠"
+  },
+  {
+    "id": 152,
+    "name": "DaisyUI",
+    "url": "https://daisyui.com",
+    "category": "🎨 UI 设计",
+    "description": "基于 Tailwind 的 UI 组件库，支持多主题、暗黑模式",
+    "icon": "🌼"
+  },
+  {
+    "id": 153,
+    "name": "Flowbite",
+    "url": "https://flowbite.com",
+    "category": "🎨 UI 设计",
+    "description": "使用 Tailwind CSS 构建的组件与模板集合，适合仪表盘/后台页面",
+    "icon": "🧬"
+  },
+  {
+    "id": 154,
+    "name": "Mantine",
+    "url": "https://mantine.dev",
+    "category": "🎨 UI 设计",
+    "description": "支持 React/Vite 的现代组件库，内置暗黑主题和响应式布局",
+    "icon": "🌿"
+  },
+  {
+    "id": 155,
+    "name": "UIverse",
+    "url": "https://uiverse.io",
+    "category": "🎨 UI 设计",
+    "description": "提供免费开源的 HTML/CSS 组件，支持复制代码与分类搜索",
+    "icon": "🌌"
+  },
+  {
+    "id": 156,
+    "name": "HyperUI",
+    "url": "https://www.hyperui.dev",
+    "category": "🎨 UI 设计",
+    "description": "开源的 Tailwind CSS 组件库，样式现代，布局多样",
+    "icon": "🚀"
+  },
+  {
+    "id": 157,
+    "name": "TailGrids",
+    "url": "https://tailgrids.com",
+    "category": "🎨 UI 设计",
+    "description": "专业级 Tailwind UI 组件模板，适合企业站或仪表盘",
+    "icon": "🔳"
+  },
+  {
+    "id": 158,
+    "name": "Tailblocks",
+    "url": "https://tailblocks.cc",
+    "category": "🎨 UI 设计",
+    "description": "Tailwind CSS 页面区块组件，支持拖拽与预览",
+    "icon": "🧱"
+  },
+  {
+    "id": 159,
+    "name": "React UI Kit",
+    "url": "https://react-uikit.com",
+    "category": "🎨 UI 设计",
+    "description": "收集各种常见组件的 UI 示例，支持 React/Vue/HTML",
+    "icon": "🧩"
+  },
+  {
+    "id": 160,
+    "name": "Component Gallery",
+    "url": "https://component.gallery",
+    "category": "🎨 UI 设计",
+    "description": "UI 组件设计图库，涵盖表单、按钮、空状态等各种元素",
+    "icon": "🖼️"
+  },
+  {
+    "id": 161,
+    "name": "CSS Scan",
+    "url": "https://getcssscan.com/css-box-shadow-examples",
+    "category": "🎨 UI 设计",
+    "description": "提供上百种 box-shadow 示例，一键复制 CSS",
+    "icon": "📦"
+  },
+  {
+    "id": 162,
+    "name": "Glassmorphism Generator",
+    "url": "https://hype4.academy/tools/glassmorphism-generator",
+    "category": "🎨 UI 设计",
+    "description": "生成玻璃拟态样式的在线工具",
+    "icon": "🧊"
+  },
+  {
+    "id": 163,
+    "name": "Neumorphism.io",
+    "url": "https://neumorphism.io",
+    "category": "🎨 UI 设计",
+    "description": "生成新拟态风格的按钮与面板样式",
+    "icon": "💿"
+  },
+  {
+    "id": 164,
+    "name": "ui-snippets.dev",
+    "url": "https://ui-snippets.dev",
+    "category": "🎨 UI 设计",
+    "description": "收录各种 UI 片段的灵感库，偏向现代、极简风格",
+    "icon": "🎯"
+  },
+  {
+    "id": 165,
+    "name": "Base64 Decode/Encode",
+    "url": "https://www.base64decode.org",
+    "category": "🛠️ 开发工具",
+    "description": "Base64 编码与解码工具，支持文件和文本",
+    "icon": "🔐"
+  },
+  {
+    "id": 166,
+    "name": "Regex101",
+    "url": "https://regex101.com",
+    "category": "🛠️ 开发工具",
+    "description": "正则表达式在线测试，支持解释器和调试模式",
+    "icon": "📐"
+  },
+  {
+    "id": 167,
+    "name": "JSON Formatter",
+    "url": "https://jsonformatter.org",
+    "category": "🛠️ 开发工具",
+    "description": "JSON 格式化、美化与验证工具，支持复制与下载",
+    "icon": "🧾"
+  },
+  {
+    "id": 168,
+    "name": "Code Beautify",
+    "url": "https://codebeautify.org",
+    "category": "🛠️ 开发工具",
+    "description": "多功能开发工具集合，包括 JSON、XML、HTML、JS 格式化等",
+    "icon": "✨"
+  },
+  {
+    "id": 169,
+    "name": "Carbon",
+    "url": "https://carbon.now.sh",
+    "category": "🛠️ 开发工具",
+    "description": "将代码片段渲染为美观的图像，支持多种主题与语言",
+    "icon": "🖼️"
+  },
+  {
+    "id": 172,
+    "name": "SVGOMG",
+    "url": "https://jakearchibald.github.io/svgomg/",
+    "category": "🛠️ 开发工具",
+    "description": "SVG 优化工具，压缩 SVG 文件大小，同时保留可视效果",
+    "icon": "🖌️"
+  },
+  {
+    "id": 173,
+    "name": "TinyPNG",
+    "url": "https://tinypng.com",
+    "category": "🛠️ 开发工具",
+    "description": "智能压缩 PNG 和 JPEG 图片，无损降低图片体积",
+    "icon": "🐼"
+  },
+  {
+    "id": 174,
+    "name": "Squoosh",
+    "url": "https://squoosh.app",
+    "category": "🛠️ 开发工具",
+    "description": "由 Google 提供的图片压缩和格式转换工具",
+    "icon": "🗜️"
+  },
+  {
+    "id": 176,
+    "name": "Chart.js",
+    "url": "https://www.chartjs.org",
+    "category": "📊 数据可视化",
+    "description": "轻量级 HTML5 图表库，适合快速绘制常规图表",
+    "icon": "📊"
+  },
+  {
+    "id": 177,
+    "name": "D3.js",
+    "url": "https://d3js.org",
+    "category": "📊 数据可视化",
+    "description": "功能强大的数据驱动文档可视化库，适用于高度自定义图形绘制",
+    "icon": "🧠"
+  },
+  {
+    "id": 178,
+    "name": "AntV",
+    "url": "https://antv.vision",
+    "category": "📊 数据可视化",
+    "description": "阿里开源的可视化解决方案，包括 G2、G6、F2、L7 等子库",
+    "icon": "🧬"
+  },
+  {
+    "id": 179,
+    "name": "Highcharts",
+    "url": "https://www.highcharts.com",
+    "category": "📊 数据可视化",
+    "description": "商业图表库，交互效果丰富，兼容性强，免费用于个人项目",
+    "icon": "🏔️"
+  },
+  {
+    "id": 180,
+    "name": "Plotly.js",
+    "url": "https://plotly.com/javascript",
+    "category": "📊 数据可视化",
+    "description": "基于 D3 和 stack.gl 构建的交互式图表库，适合科学图表",
+    "icon": "🔬"
+  },
+  {
+    "id": 181,
+    "name": "Recharts",
+    "url": "https://recharts.org",
+    "category": "📊 数据可视化",
+    "description": "React 图表组件库，基于 D3 封装，开发友好",
+    "icon": "📦"
+  },
+  {
+    "id": 183,
+    "name": "Zrender",
+    "url": "https://ecomfe.github.io/zrender",
+    "category": "📊 数据可视化",
+    "description": "Echarts 的底层渲染库，支持 Canvas 与 SVG 的图形渲染",
+    "icon": "🖌️"
+  },
+  {
+    "id": 184,
+    "name": "G2Plot",
+    "url": "https://g2plot.antv.vision",
+    "category": "📊 数据可视化",
+    "description": "AntV G2 的高级封装版本，语法简单，适合业务图表",
+    "icon": "📉"
+  }
+]

@@ -2,6 +2,7 @@ import "./App.css";
 import MainMenu from "./MainMenu";
 import AIChatApp from "./AIChatApp";
 import PhysicsSandbox from "./PhysicsSandbox";
+import WebNavigation from "./WebNavigation";
 import {
   BrowserRouter as Router,
   Routes,
@@ -39,6 +40,10 @@ function AppContent() {
         <Route
           path="/physics-sandbox"
           element={<PhysicsSandbox onBack={handleBackToMenu} />}
+        />
+        <Route
+          path="/web-navigation"
+          element={<WebNavigation onBack={handleBackToMenu} />}
         />
       </Routes>
     </div>

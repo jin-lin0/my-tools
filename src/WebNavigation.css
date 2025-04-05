@@ -1,0 +1,126 @@
+.web-navigation-container {
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.category-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 20px;
+  background: #f5f5f5;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.category-nav.collapsed {
+  background: transparent;
+  box-shadow: none;
+}
+
+.category-nav.collapsed .nav-toggle-button {
+  width: 60px;
+}
+
+.category-nav.collapsed :not(:first-child) {
+  display: none;
+  transition: display 0.3s ease;
+}
+
+.category-nav-item {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: none;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-nav-item:hover {
+  background: #e0e0e0;
+}
+
+.web-navigation {
+  padding: 20px;
+  flex: 1;
+}
+
+.web-navigation-expanded {
+  margin-left: 240px;
+}
+
+.web-navigation-collapsed {
+  margin-left: 0;
+}
+
+.category-section {
+  margin-bottom: 30px;
+}
+
+.category-section h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.websites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+  gap: 20px;
+}
+
+.website-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: math;
+  gap: 10px;
+}
+
+.website-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.website-icon {
+  font-size: 1.5rem;
+}
+
+.website-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.website-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .category-nav {
+    width: 25%;
+  }
+
+  .web-navigation-expanded {
+    margin-left: calc(25% + 40px);
+  }
+
+  .web-navigation-collapsed {
+    margin-left: 0;
+  }
+}
