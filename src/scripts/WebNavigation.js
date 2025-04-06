@@ -1,4 +1,4 @@
-import websitesData from "./WebNavigation.json" assert { type: "json" };
+import websitesData from "../WebNavigation.json" assert { type: "json" };
 
 // 用来记录重复项的对象
 const nameCount = {};
