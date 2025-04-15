@@ -15,4 +15,7 @@ websitesData.forEach((item) => {
   }
 });
 
+const categories = [...new Set(websitesData.map((site) => site.category))];
+
 console.log("重复项:", duplicates);
+console.log("categories:", categories);

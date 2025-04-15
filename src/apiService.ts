@@ -1,19 +1,25 @@
 import axios from "axios";
 import {
-  SILICONFLOW_API_KEY,
-  SILICONFLOW_API_URL,
   SERVER_API_URL,
+  OPENROUTER_API_URL,
+  OPENROUTER_API_KEY,
 } from "./config";
+import { ApiProviderConfig } from "./apiConfig";
 
-const MAX_CONTEXT_LENGTH = 10;
+const MAX_CONTEXT_LENGTH = 30;
 const conversationContext: Array<{ role: string; content: string }> = [];
 
 export const fetchDeepSeekAPI = async (
   message: string,
-  onChunk?: (chunk: string) => void
+  onChunk?: (chunk: string) => void,
+  {
+    apiUrl = OPENROUTER_API_URL,
+    apiKey = OPENROUTER_API_KEY,
+    defaultModel: model = "deepseek/deepseek-chat-v3-0324:free",
+  }: Partial<ApiProviderConfig> = {}
 ): Promise<void> => {
-  let token = localStorage.getItem("deepseek_token") || SILICONFLOW_API_KEY;
-  if (!token) throw new Error("未设置DeepSeek API Token");
+  let token = localStorage.getItem("apiKey_token") || apiKey;
+  if (!token) throw new Error("未设置API Token");
 
   let answer = "";
 
@@ -26,14 +32,14 @@ export const fetchDeepSeekAPI = async (
       conversationContext.shift();
     }
 
-    const response = await fetch(`${SILICONFLOW_API_URL}/chat/completions`, {
+    const response = await fetch(`${apiUrl}/chat/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        model: "deepseek-ai/DeepSeek-V3",
+        model: model,
         messages: conversationContext,
         temperature: 0.7,
         stream: true,
@@ -74,19 +80,23 @@ export const fetchDeepSeekAPI = async (
     // 添加AI回复到上下文
     conversationContext.push({ role: "assistant", content: answer });
 
-    await saveMessageToServer(message, answer);
+    await saveMessageToServer(message, answer, model);
   } catch (error) {
     console.error("API请求错误:", error);
     throw error;
   }
 };
 
-const saveMessageToServer = async (question: string, answer: string) => {
+const saveMessageToServer = async (
+  question: string,
+  answer: string,
+  model: string
+) => {
   try {
     await axios.post(`${SERVER_API_URL}/messages`, {
       question,
       answer,
-      model: "deepseek-ai/DeepSeek-V3",
+      model: model,
     });
   } catch (error) {
     console.error("保存消息到服务器失败:", error);

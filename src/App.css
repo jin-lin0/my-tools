@@ -3,5 +3,12 @@
   height: 100%;
   margin: 0 auto;
   text-align: center;
+  font-family: cursive, sans-serif;
+}
+
+h1,
+h2,
+.app-name,
+.add-shape {
   font-family: "DingLieXiDa", "Pacifico", cursive, sans-serif;
 }

@@ -28,6 +28,7 @@
 .chat-header h2 {
   color: #2d3748;
   margin: 0;
+  user-select: none;
 }
 
 .chat-messages {

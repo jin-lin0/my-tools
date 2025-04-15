@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./AIChatApp.css";
 import { fetchDeepSeekAPI } from "./apiService";
+import { apiProviders, DEFAULT_PROVIDER } from "./apiConfig";
 import ReactMarkdown from "react-markdown";
 import BackButton from "./components/BackButton";
+import DrapDown from "./components/DrapDown";
 
 interface Message {
   id: string;
@@ -34,6 +36,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedProvider, setSelectedProvider] = useState(DEFAULT_PROVIDER);
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -58,21 +61,26 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
 
       setMessages((prev) => [...prev, initialAiMessage]);
 
-      await fetchDeepSeekAPI(inputValue, (chunk) => {
-        setMessages((prev) => {
-          const updated = [...prev];
-          const aiMessageIndex = updated.findIndex(
-            (msg) => msg.id === aiMessageId
-          );
-          if (aiMessageIndex !== -1) {
-            updated[aiMessageIndex] = {
-              ...updated[aiMessageIndex],
-              content: updated[aiMessageIndex].content + chunk,
-            };
-          }
-          return updated;
-        });
-      });
+      const provider = apiProviders[selectedProvider];
+      await fetchDeepSeekAPI(
+        inputValue,
+        (chunk) => {
+          setMessages((prev) => {
+            const updated = [...prev];
+            const aiMessageIndex = updated.findIndex(
+              (msg) => msg.id === aiMessageId
+            );
+            if (aiMessageIndex !== -1) {
+              updated[aiMessageIndex] = {
+                ...updated[aiMessageIndex],
+                content: updated[aiMessageIndex].content + chunk,
+              };
+            }
+            return updated;
+          });
+        },
+        provider
+      );
     } catch (error) {
       console.error("API请求失败:", error);
     } finally {
@@ -85,6 +93,12 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
       <div className="chat-header">
         <BackButton onBack={onBack} />
         <h2>AI聊天助手</h2>
+        <DrapDown
+          options={Object.keys(apiProviders)}
+          placeholder="选择API"
+          onChange={setSelectedProvider}
+          defaultValue="openrouter"
+        />
       </div>
 
       <div className="chat-messages">
@@ -108,7 +122,6 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
             {msg.isUser ? (
               msg.content
             ) : (
-              //   <TypewriterMessage content={msg.content} />
               <ReactMarkdown>
                 {`${String(msg.content)}${
                   !msg.content.endsWith("\n") && isLoading ? "..." : ""

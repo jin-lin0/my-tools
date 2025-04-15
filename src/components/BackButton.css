@@ -3,11 +3,12 @@
   left: 1rem;
   top: 1rem;
   padding: 0.5rem 1rem;
-  background: #e2e8f0;
+  background: #ffffff33;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
+  z-index: 100;
 }
 
 .back-button:hover {
