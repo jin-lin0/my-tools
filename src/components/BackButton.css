@@ -1,16 +1,89 @@
 .back-button {
+  display: flex;
+  align-items: center;
   position: absolute;
-  left: 1rem;
-  top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #ffffff33;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.25);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.25s ease;
+  font-weight: 500;
+  color: #333;
   z-index: 100;
 }
 
+/* 位置变体 */
+.back-button.top-left {
+  left: 0.2rem;
+  top: 1.2rem;
+}
+
+.back-button.top-right {
+  right: 0.2rem;
+  top: 1.2rem;
+}
+
+.back-button.bottom-left {
+  left: 0.2rem;
+  bottom: 1.2rem;
+}
+
+.back-button.bottom-right {
+  right: 0.2rem;
+  bottom: 1.2rem;
+}
+
+/* 主题变体 */
+.back-button.light {
+  background: rgba(255, 255, 255, 0.25);
+  color: #333;
+  border-color: rgba(220, 220, 220, 0.5);
+}
+
+.back-button.dark {
+  background: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  border-color: rgba(100, 100, 100, 0.5);
+}
+
+.back-button.primary {
+  background: rgba(59, 130, 246, 0.8);
+  color: white;
+  border-color: rgba(29, 78, 216, 0.5);
+}
+
+/* 图标样式 */
+.back-button .icon {
+  margin-right: 0.5rem;
+  font-size: 1.1em;
+}
+
+/* 右上和右下位置的特殊图标样式 */
+.back-button.top-right .icon,
+.back-button.bottom-right .icon {
+  transform: scaleX(-1);
+}
+
+/* 悬停效果 */
 .back-button:hover {
-  background: #cbd5e0;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-button.light:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.back-button.dark:hover {
+  background: rgba(40, 40, 40, 0.8);
+}
+
+.back-button.primary:hover {
+  background: rgba(37, 99, 235, 0.9);
+}
+
+/* 点击效果 */
+.back-button:active {
+  transform: translateY(0);
 }

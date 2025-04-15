@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./WebNavigation.css";
 import websitesData from "./WebNavigation.json";
+import BackButton from "./components/BackButton";
 
 interface Website {
   id: string | number;
@@ -15,7 +16,7 @@ interface WebNavigationProps {
   onBack: () => void;
 }
 
-const WebNavigation: React.FC<WebNavigationProps> = () => {
+const WebNavigation: React.FC<WebNavigationProps> = ({ onBack }) => {
   // 添加返回按钮
   const [isNavVisible, setIsNavVisible] = React.useState(() => {
     const saved = localStorage.getItem("webNavCollapsed");
@@ -35,6 +36,7 @@ const WebNavigation: React.FC<WebNavigationProps> = () => {
 
   return (
     <div className="web-navigation-container">
+      <BackButton position="top-right" onBack={onBack} />
       <div className={`category-nav ${isNavVisible ? "" : "collapsed"}`}>
         <button
           key={`nav-toggle`}

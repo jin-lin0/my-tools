@@ -20,6 +20,9 @@
   margin-right: 10px;
   transition: all 0.2s ease;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .reset-button {
