@@ -37,6 +37,7 @@
   padding: 1rem;
   /* margin-left: 2rem; */
   overflow-y: auto;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

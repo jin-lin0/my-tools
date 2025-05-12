@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "我的网站",
+    "url": "https://example.com",
+    "category": "🌟 我的收藏",
+    "description": "这是我的个人网站",
+    "icon": "🚀"
+  },
+  {
+    "id": 2,
+    "name": "GitHub",
+    "url": "https://github.com",
+    "category": "🌟 我的收藏",
+    "description": "代码托管平台",
+    "icon": "🐱"
+  },
+  {
+    "id": 3,
+    "name": "Google",
+    "url": "https://google.com",
+    "category": "🔍 搜索引擎",
+    "description": "全球最大的搜索引擎",
+    "icon": "🔍"
+  }
+]
