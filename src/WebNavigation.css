@@ -207,4 +207,8 @@
   .web-navigation-collapsed {
     margin-left: 0;
   }
+
+  .web-navigation-header h1 {
+    display: none;
+  }
 }
