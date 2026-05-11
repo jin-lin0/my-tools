@@ -1,26 +1,41 @@
 [
   {
-    "id": 1,
-    "name": "我的网站",
-    "url": "https://example.com",
-    "category": "🌟 我的收藏",
-    "description": "这是我的个人网站",
-    "icon": "🚀"
+    "id": 10,
+    "name": "Claude官网",
+    "url": "https://claude.ai/",
+    "category": "AI聊天",
+    "description": "claude 3.7 sonnet 20+使用次数/d",
+    "icon": "🩷"
   },
   {
-    "id": 2,
-    "name": "GitHub",
-    "url": "https://github.com",
-    "category": "🌟 我的收藏",
-    "description": "代码托管平台",
-    "icon": "🐱"
+    "id": 11,
+    "name": "Poe",
+    "url": "https://poe.com/",
+    "category": "AI聊天",
+    "description": "3000积分/d",
+    "icon": "🩷"
   },
   {
-    "id": 3,
-    "name": "Google",
-    "url": "https://google.com",
-    "category": "🔍 搜索引擎",
-    "description": "全球最大的搜索引擎",
-    "icon": "🔍"
+    "id": 12,
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI聊天",
+    "description": "3深入研究 3深入搜索 3文件上传/d 不可选择模型",
+    "icon": "🩷"
+  },
+  {
+    "id": 13,
+    "name": "Lmsys",
+    "url": "https://lmarena.ai/",
+    "category": "AI聊天",
+    "description": "免费，无需登录，不能上传文件",
+    "icon": "🩷"
+  },
+  {
+    "id": 21,
+    "name": "LINUX DO",
+    "url": "https://linux.do/",
+    "category": "社区",
+    "description": "中文AI社区"
   }
 ]

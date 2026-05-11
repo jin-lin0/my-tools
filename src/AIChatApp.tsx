@@ -68,7 +68,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
           setMessages((prev) => {
             const updated = [...prev];
             const aiMessageIndex = updated.findIndex(
-              (msg) => msg.id === aiMessageId
+              (msg) => msg.id === aiMessageId,
             );
             if (aiMessageIndex !== -1) {
               updated[aiMessageIndex] = {
@@ -79,7 +79,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
             return updated;
           });
         },
-        provider
+        provider,
       );
     } catch (error) {
       console.error("API请求失败:", error);
@@ -97,7 +97,7 @@ const AIChatApp: React.FC<AIChatAppProps> = ({ onBack }) => {
           options={Object.keys(apiProviders)}
           placeholder="选择API"
           onChange={setSelectedProvider}
-          defaultValue="openrouter"
+          defaultValue={DEFAULT_PROVIDER}
         />
       </div>
 
