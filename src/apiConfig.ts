@@ -23,7 +23,7 @@ export const apiProviders: Record<string, ApiProviderConfig> = {
     name: "SILICONFLOW",
     apiUrl: SILICONFLOW_API_URL,
     apiKey: SILICONFLOW_API_KEY,
-    defaultModel: "deepseek-ai/DeepSeek-V3",
+    defaultModel: "deepseek-ai/DeepSeek-V3.2",
   },
 };
 
